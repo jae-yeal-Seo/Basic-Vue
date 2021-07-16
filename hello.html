@@ -1,25 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Vue</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
 
 <body>
+    <!-- <div id="app">
+        <hello name="user"></hello>
+        <hello name="students"></hello>
+        <local-hello></local-hello>
+    </div> -->
     <div id="app">
-        <input type="checkbox" id="checkbox_single" v-model="value">
-        <label for="checkbox_single">{{ value }}</label>
-
-        <div>
-            <input type="checkbox" id="checkbox_one" value="one" v-model="values">
-            <!-- v-model에 배열이름(hello.js에 있음)을 넣으면 value의 value값을 values배열로 보냄. -->
-            <label for="checkbox_one">one</label>
-            <input type="checkbox" id="checkbox_two" value="two" v-model="values">
-            <label for="checkbox_two">two</label>
-            <input type="checkbox" id="checkbox_three" value="three" v-model="values">
-            <label for="checkbox_three">three</label>
-            <p>Checked:{{ values }}</p>
-        </div>
+        <h3>{{ totalCount }}</h3>
+        <add @event-add="updateTotal"></add><br>
+        <add @event-add="updateTotal"></add><br>
+        <add @event-add="updateTotal"></add><br>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
