@@ -1,19 +1,3 @@
-// Vue.components('hello',{
-//     props:['name'],
-//     template:'<p>{{message}}</p>',
-//     data:function(){
-//         return{ message:'hello!,'+this.name }
-//     }
-// });
-
-// let app = new Vue({
-//     el:'#app',
-//     components:{
-//         'local-hello':{
-//             template:'<p>This is local component</p>'
-//         }
-//     }
-// });
 Vue.component('add',{
     template:'<button @click="add">{{count}}</button>',
     data(){
@@ -21,11 +5,11 @@ Vue.component('add',{
     },
     methods:{
         add(){
-            this.count+=1
+            this.count+=1;
             this.$emit('event-add',1);
         }
     }
-})
+});
 
 let app = new Vue({
     el:'#app',
@@ -34,7 +18,7 @@ let app = new Vue({
     },
     methods:{
         updateTotal(count){
-            this.totalCount+=count
+            this.totalCount +=count;
         }
     }
 });
