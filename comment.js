@@ -22,7 +22,7 @@ Vue.component('store',{
               user:this.user,
               comment:this.comment
           };
-          //얜 객체구나.
+          //얜 객체구나.(message)
          
           if(message.user!=null||message.comment!=null){
           this.message.unshift(message)
